@@ -38,4 +38,9 @@ jobs:
         run: dotnet new xunit --name ${{ github.event.inputs.customer }}.${{ github.event.inputs.project }}.UnitTests
       
       - name: Git Commit/Push Changes
-        uses: actions-x/commit@v2.9
+        uses: github-actions-x/commit@v2.9
+          with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'main'
+          commit-message: 'initial setup'
+          force-add: 'true'
