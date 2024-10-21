@@ -1,0 +1,6 @@
+@BelfiusDirect.Test_HostAddress = http://localhost:5177
+
+GET {{BelfiusDirect.Test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
